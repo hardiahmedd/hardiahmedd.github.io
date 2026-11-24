@@ -1,0 +1,26 @@
+body { margin: 0; background: #fff; color: #212121; font: 16px/1.56 Arial, Helvetica, sans-serif; }
+a { color: #4a86e8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+          gap: 8px; padding: 8px 24px; border-bottom: 1px solid #eee; }
+.topbar img { height: 48px; display: block; }
+.topbar nav a { color: #6a6a6a; font-family: "Open Sans", sans-serif; margin-left: 24px; padding-bottom: 4px; }
+.topbar nav a[aria-current] { color: #212121; border-bottom: 3px solid #980000; }
+
+main { max-width: 640px; margin: 0 auto; padding: 40px 16px; }
+h1, h2 { color: #980000; font-size: 21.33px; line-height: 2; text-align: center; margin: 32px 0 24px; }
+.portrait { display: block; width: 330px; max-width: 100%; margin: 40px auto 64px; }
+
+.paper { margin-bottom: 32px; }
+.paper h3 { font-size: 16px; margin: 0 0 4px; }
+.paper h3 a { color: #4a86e8; }
+.paper p { margin: 0; }
+.wip p { margin: 0 0 16px; }
+
+.blog { text-align: center; margin: 64px 0; }
+.blog img { width: 100%; display: block; margin-bottom: 40px; }
+
+footer { display: flex; justify-content: center; gap: 22px; padding: 32px 16px 48px; font-size: 24px; }
+footer a { color: #212121; }
+footer a:hover { color: #4a86e8; text-decoration: none; }
