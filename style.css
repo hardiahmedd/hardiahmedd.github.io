@@ -1,26 +1,59 @@
-body { margin: 0; background: #fff; color: #212121; font: 16px/1.56 Arial, Helvetica, sans-serif; }
-a { color: #4a86e8; text-decoration: none; }
+:root { --text:#222; --muted:#666; --accent:#1f4e79; --rule:#e3e3e3; --bg:#fff; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+       font: 17px/1.65 "Source Serif 4", Georgia, serif; }
+a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+.sans { font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif; }
 
-.topbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-          gap: 8px; padding: 8px 24px; border-bottom: 1px solid #eee; }
-.topbar img { height: 48px; display: block; }
-.topbar nav a { color: #6a6a6a; font-family: "Open Sans", sans-serif; margin-left: 24px; padding-bottom: 4px; }
-.topbar nav a[aria-current] { color: #212121; border-bottom: 3px solid #980000; }
+/* top bar */
+.masthead { border-bottom: 1px solid var(--rule); }
+.masthead .inner { max-width: 1080px; margin: 0 auto; padding: 14px 16px;
+                   display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.site-name { font-family: "Source Sans 3", sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--text); }
+.masthead nav a { font-family: "Source Sans 3", sans-serif; color: var(--muted); margin-left: 22px; }
+.masthead nav a:first-child { margin-left: 0; }
+.masthead nav a[aria-current] { color: var(--text); font-weight: 600; }
 
-main { max-width: 640px; margin: 0 auto; padding: 40px 16px; }
-h1, h2 { color: #980000; font-size: 21.33px; line-height: 2; text-align: center; margin: 32px 0 24px; }
-.portrait { display: block; width: 330px; max-width: 100%; margin: 40px auto 64px; }
+/* sidebar + content */
+.layout { max-width: 1080px; margin: 0 auto; padding: 40px 16px; display: grid;
+          grid-template-columns: 240px 1fr; gap: 56px; }
+.profile { font-family: "Source Sans 3", sans-serif; font-size: .95rem; }
+.profile img { width: 100%; max-width: 220px; border-radius: 4px; display: block; }
+.profile h2 { font-size: 1.25rem; margin: 14px 0 2px; }
+.profile p { margin: 0 0 4px; color: var(--muted); line-height: 1.4; }
+.profile ul { list-style: none; padding: 0; margin: 18px 0 0; }
+.profile li { margin: 6px 0; }
+.profile li a { color: var(--text); }
+.profile li a:hover { color: var(--accent); }
+.profile i { width: 22px; color: var(--muted); }
 
-.paper { margin-bottom: 32px; }
-.paper h3 { font-size: 16px; margin: 0 0 4px; }
-.paper h3 a { color: #4a86e8; }
-.paper p { margin: 0; }
-.wip p { margin: 0 0 16px; }
+main { min-width: 0; }
+main h1 { font-size: 1.7rem; font-weight: 600; margin: 0 0 18px; }
+main h2 { font-size: 1.3rem; font-weight: 600; margin: 40px 0 16px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+main h1 + h2 { margin-top: 0; }
 
-.blog { text-align: center; margin: 64px 0; }
-.blog img { width: 100%; display: block; margin-bottom: 40px; }
+/* papers */
+.paper { margin-bottom: 26px; }
+.paper h3 { font-size: 1.05rem; margin: 0; }
+.paper .meta { color: var(--muted); margin: 2px 0 0; }
+.paper details { margin-top: 4px; }
+.paper summary { cursor: pointer; color: var(--accent); font-family: "Source Sans 3", sans-serif; font-size: .9rem; }
+.paper details p { margin: 8px 0 0; font-size: .95rem; }
 
-footer { display: flex; justify-content: center; gap: 22px; padding: 32px 16px 48px; font-size: 24px; }
-footer a { color: #212121; }
-footer a:hover { color: #4a86e8; text-decoration: none; }
+/* blog */
+.post { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: center; margin-bottom: 28px; }
+.post img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; display: block; }
+.post h3 { margin: 0; font-size: 1.05rem; }
+.post p { margin: 2px 0 0; color: var(--muted); }
+
+footer { border-top: 1px solid var(--rule); text-align: center; color: var(--muted);
+         font: .85rem "Source Sans 3", sans-serif; padding: 20px 16px 32px; }
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; gap: 32px; padding-top: 28px; }
+  .profile { text-align: center; }
+  .profile img { max-width: 160px; margin: 0 auto; }
+  .profile ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; }
+  .post { grid-template-columns: 1fr; gap: 10px; }
+}
