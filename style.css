@@ -46,12 +46,16 @@ main h2::after { content: ""; position: absolute; left: 0; right: 0; top: calc(1
 main h1 + section > h2 { margin-top: 0; }
 
 /* papers */
-.paper { margin-bottom: 26px; }
+.paper { margin-bottom: 26px; position: relative; z-index: 0; }
 .paper h3 { font-size: 1.05rem; margin: 0; }
 .paper .meta { color: var(--muted); margin: 2px 0 0; }
 .paper .tags { margin: 2px 0 0; font: .85rem "Source Sans 3", sans-serif; color: var(--muted); }
 .paper details { margin-top: 4px; }
-.paper summary { cursor: pointer; color: var(--accent); font-family: "Source Sans 3", sans-serif; font-size: .9rem; }
+.paper summary { cursor: pointer; color: var(--accent); font-family: "Source Sans 3", sans-serif; font-size: .9rem; list-style: none; }
+/* plain-text triangle instead of the browser's built-in marker (Safari draws that one above pinned headings) */
+.paper summary::-webkit-details-marker { display: none; }
+.paper summary::before { content: "\25B8"; display: inline-block; width: 1em; }
+.paper details[open] > summary::before { content: "\25BE"; }
 .paper details p { margin: 8px 0 0; font-size: .95rem; }
 
 /* blog */
