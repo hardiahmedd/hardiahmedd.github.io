@@ -1,4 +1,4 @@
-:root { --text:#222; --muted:#666; --accent:#1f4e79; --rule:#e3e3e3; --bg:#fff; }
+:root { --text:#222; --muted:#666; --accent:#1f4e79; --rule:#e3e3e3; --bg:#fff; --head: 63px; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
        font: 17px/1.65 "Source Serif 4", Georgia, serif; }
@@ -7,7 +7,7 @@ a:hover { text-decoration: underline; }
 .sans { font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif; }
 
 /* top bar */
-.masthead { border-bottom: 1px solid var(--rule); }
+.masthead { border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 10; background: var(--bg); }
 .masthead .inner { max-width: 1140px; margin: 0 auto; padding: 14px 16px;
                    display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .site-name { font-family: "Source Sans 3", sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--text); }
@@ -18,7 +18,7 @@ a:hover { text-decoration: underline; }
 /* sidebar + content */
 .layout { max-width: 1140px; margin: 0 auto; padding: 40px 16px; display: grid;
           grid-template-columns: 240px 1fr; gap: 56px; align-items: start; }
-.profile { font-family: "Source Sans 3", sans-serif; font-size: .95rem; text-align: center; position: sticky; top: 24px; }
+.profile { font-family: "Source Sans 3", sans-serif; font-size: .95rem; text-align: center; position: sticky; top: calc(var(--head) + 24px); }
 .profile img { width: 180px; max-width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto; }
 .profile h2 { font-size: 1.25rem; margin: 14px 0 2px; }
 .profile p { margin: 0 0 4px; color: var(--muted); line-height: 1.4; }
@@ -31,7 +31,8 @@ a:hover { text-decoration: underline; }
 .profile .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 main { min-width: 0; }
-main h1 { font-size: 1.7rem; font-weight: 600; margin: 0 0 18px; }
+main h1 { font-size: 1.7rem; font-weight: 600; margin: 0 0 18px; position: sticky; top: var(--head); z-index: 5;
+          background: var(--bg); padding: 8px 0; }
 main h2 { font-size: 1.3rem; font-weight: 600; margin: 40px 0 16px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
 main h1 + h2 { margin-top: 0; }
 
@@ -56,6 +57,7 @@ footer { border-top: 1px solid var(--rule); text-align: center; color: var(--mut
          font: .85rem "Source Sans 3", sans-serif; padding: 20px 16px 32px; }
 
 @media (max-width: 760px) {
+  :root { --head: 55px; }
   .masthead .inner { flex-wrap: wrap; align-items: center; gap: 0; padding: 10px 16px; }
   .menu-btn { display: block; margin-left: auto; background: none; border: 0; padding: 4px 2px;
               font-size: 1.5rem; line-height: 1; color: var(--text); cursor: pointer; }
