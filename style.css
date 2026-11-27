@@ -13,17 +13,17 @@ a:hover { text-decoration: underline; }
 .site-name { font-family: "Source Sans 3", sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--text); }
 .masthead nav a { font-family: "Source Sans 3", sans-serif; color: var(--muted); margin-left: 22px; }
 .masthead nav a:first-child { margin-left: 0; }
-.masthead nav a[aria-current] { color: var(--text); font-weight: 600; }
+.masthead nav a[aria-current] { color: var(--text); font-weight: 600; border-bottom: 2px solid var(--accent); padding-bottom: 3px; }
 
 /* sidebar + content */
 .layout { max-width: 1140px; margin: 0 auto; padding: 40px 16px; display: grid;
-          grid-template-columns: 240px 1fr; gap: 56px; }
-.profile { font-family: "Source Sans 3", sans-serif; font-size: .95rem; }
-.profile img { width: 100%; max-width: 220px; border-radius: 4px; display: block; }
+          grid-template-columns: 240px 1fr; gap: 56px; align-items: start; }
+.profile { font-family: "Source Sans 3", sans-serif; font-size: .95rem; text-align: center; position: sticky; top: 24px; }
+.profile img { width: 180px; max-width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto; }
 .profile h2 { font-size: 1.25rem; margin: 14px 0 2px; }
 .profile p { margin: 0 0 4px; color: var(--muted); line-height: 1.4; }
-.profile ul { list-style: none; padding: 0; margin: 18px 0 0; }
-.profile li { margin: 6px 0; }
+.profile ul { list-style: none; padding: 0; margin: 18px auto 0; width: fit-content; text-align: left; }
+.profile li { margin: 8px 0; }
 .profile li a { color: var(--text); }
 .profile li a:hover { color: var(--accent); }
 .profile .ic { width: 15px; height: 15px; margin-right: 7px; vertical-align: -2px; fill: var(--muted); }
@@ -59,9 +59,9 @@ footer { border-top: 1px solid var(--rule); text-align: center; color: var(--mut
               font-size: 1.5rem; line-height: 1; color: var(--text); cursor: pointer; }
   .masthead nav { display: none; width: 100%; flex-direction: column; padding-top: 6px; }
   .masthead .open nav { display: flex; }
-  .masthead nav a { margin-left: 0; padding: 10px 0; border-top: 1px solid var(--rule); }
+  .masthead nav a, .masthead nav a[aria-current] { margin-left: 0; padding: 10px 0; border-top: 1px solid var(--rule); border-bottom: 0; }
   .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px 32px; }
-  .profile { text-align: center; }
+  .profile { text-align: center; position: static; }
   .profile img { max-width: 120px; margin: 0 auto; border-radius: 50%; aspect-ratio: 1; object-fit: cover; }
   .profile h2 { margin-top: 10px; }
   .profile ul { display: flex; justify-content: center; gap: 18px; margin-top: 12px; }
