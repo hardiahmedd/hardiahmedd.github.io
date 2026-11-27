@@ -48,14 +48,18 @@ main h1 + h2 { margin-top: 0; }
 .post h3 { margin: 0; font-size: 1.05rem; }
 .post p { margin: 2px 0 0; color: var(--muted); }
 
+.menu-btn { display: none; }
+
 footer { border-top: 1px solid var(--rule); text-align: center; color: var(--muted);
          font: .85rem "Source Sans 3", sans-serif; padding: 20px 16px 32px; }
 
 @media (max-width: 760px) {
-  .masthead .inner { flex-wrap: nowrap; align-items: baseline; gap: 10px; padding: 12px 14px; }
-  .site-name { font-size: 1.05rem; white-space: nowrap; }
-  .masthead nav { display: flex; gap: 12px; white-space: nowrap; }
-  .masthead nav a { margin-left: 0; font-size: .9rem; }
+  .masthead .inner { flex-wrap: wrap; align-items: center; gap: 0; padding: 10px 16px; }
+  .menu-btn { display: block; margin-left: auto; background: none; border: 0; padding: 4px 2px;
+              font-size: 1.5rem; line-height: 1; color: var(--text); cursor: pointer; }
+  .masthead nav { display: none; width: 100%; flex-direction: column; padding-top: 6px; }
+  .masthead .open nav { display: flex; }
+  .masthead nav a { margin-left: 0; padding: 10px 0; border-top: 1px solid var(--rule); }
   .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px 32px; }
   .profile { text-align: center; }
   .profile img { max-width: 120px; margin: 0 auto; border-radius: 50%; aspect-ratio: 1; object-fit: cover; }
@@ -69,9 +73,3 @@ footer { border-top: 1px solid var(--rule); text-align: center; color: var(--mut
   .post { grid-template-columns: 1fr; gap: 10px; }
 }
 
-@media (max-width: 350px) {
-  .masthead .inner { padding: 12px 10px; gap: 8px; }
-  .site-name { font-size: .98rem; }
-  .masthead nav { gap: 9px; }
-  .masthead nav a { font-size: .84rem; }
-}
