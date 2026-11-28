@@ -1,5 +1,7 @@
 :root { --text:#222; --muted:#666; --accent:#1f4e79; --rule:#e3e3e3; --bg:#fff; --head: 63px; --h1: 93px; }
 * { box-sizing: border-box; }
+/* always reserve the scrollbar's width, so the layout doesn't shift between short and long pages */
+html { scrollbar-gutter: stable; }
 body { margin: 0; background: var(--bg); color: var(--text);
        font: 17px/1.65 "Source Serif 4", Georgia, serif; }
 a { color: var(--accent); text-decoration: none; }
@@ -10,7 +12,7 @@ a:hover { text-decoration: underline; }
 .masthead { border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 10; background: var(--bg); }
 .masthead .inner { max-width: 1140px; margin: 0 auto; padding: 14px 16px; min-height: calc(var(--head) - 1px); box-sizing: border-box;
                    display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-.site-name { font-family: "Source Sans 3", sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--text); }
+.site-name { font-family: "Source Sans 3", sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--text); line-height: 34px; }
 .masthead nav a { font-family: "Source Sans 3", sans-serif; color: var(--muted); margin-left: 22px; }
 .masthead nav a:first-child { margin-left: 0; }
 .masthead nav a[aria-current] { color: var(--text); font-weight: 600; border-bottom: 2px solid var(--accent); padding-bottom: 3px; }
