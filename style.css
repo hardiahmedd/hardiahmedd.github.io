@@ -11,8 +11,9 @@ a:hover { text-decoration: underline; }
 /* top bar */
 .masthead { border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 10; background: var(--bg); }
 .masthead .inner { max-width: 1140px; margin: 0 auto; padding: 14px 16px; min-height: calc(var(--head) - 1px); box-sizing: border-box;
-                   display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+                   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .site-name { font-family: "Source Sans 3", sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--text); line-height: 34px; }
+.site-name img { display: block; height: 34px; width: auto; }
 .masthead nav a { font-family: "Source Sans 3", sans-serif; color: var(--muted); margin-left: 22px; }
 .masthead nav a:first-child { margin-left: 0; }
 .masthead nav a[aria-current] { color: var(--text); font-weight: 600; border-bottom: 2px solid var(--accent); padding-bottom: 3px; }
@@ -59,6 +60,9 @@ main h1 + section > h2 { margin-top: 0; }
 .paper summary::before { content: "\25B8"; display: inline-block; width: 1em; }
 .paper details[open] > summary::before { content: "\25BE"; }
 .paper details p { margin: 8px 0 0; font-size: .95rem; }
+
+.pdf-tag { font: 600 .68rem "Source Sans 3", sans-serif; letter-spacing: .04em; color: var(--muted);
+           border: 1px solid var(--rule); border-radius: 3px; padding: 1px 5px; margin-left: 6px; vertical-align: 2px; }
 
 /* blog */
 .post { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: center; margin-bottom: 28px; }

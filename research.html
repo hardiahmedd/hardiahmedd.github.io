@@ -16,11 +16,11 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=22">
+<link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
 <header class="masthead"><div class="inner">
-  <a class="site-name" href="index.html">Hardi Ahmed</a>
+  <a class="site-name" href="index.html"><img src="ha-mark.png" alt="Hardi Ahmed, home" width="58" height="34"></a>
   <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.parentNode.classList.toggle('open'))">&#9776;</button>
   <nav>
     <a href="index.html">Home</a>
@@ -54,7 +54,7 @@
     <h2>Working Papers</h2>
 
     <article class="paper">
-      <h3><a href="papers/ShariaCodes.pdf">Institutional Reforms and Child Health</a></h3>
+      <h3><a href="papers/ShariaCodes.pdf">Institutional Reforms and Child Health</a> <span class="pdf-tag">PDF</span></h3>
       <p class="tags">Nigeria · DHS 1990-2018 · Difference-in-differences</p>
       <details><summary>Abstract</summary>
       <p>Religious legal reforms shape child welfare in pluralistic societies. This paper examines Nigeria's 2000 Sharia Penal Code reform, adopted by 12 northern states with varying enforcement intensity. Using Demographic and Health Survey data from 1990 to 2018 and difference-in-differences estimation, I find the reform reduced child anthropometric measures by 0.23 to 0.27 standard deviations. Effects concentrated among non-Muslim minorities, who experienced declines of 0.76 standard deviations in height-for-age and 0.44 standard deviations in weight-for-age, approximately three times larger than Muslims. Muslims showed mixed effects: no significant changes in height-for-age but declines in weight-for-height. Enforcement intensity shaped outcomes for non-Muslims. A theoretical model and empirical analysis reveal two mechanisms. Among Muslims, stronger enforcement encouraged health investment but increased son-biased fertility. These opposing effects offset one another. Weak enforcement enabled (perceived) discriminatory service denial among non-Muslims, while strong enforcement protected access. These findings demonstrate how religious legal reforms create unintended spillovers that harm minority populations, with enforcement strength determining the scope for discrimination.</p>
@@ -62,7 +62,7 @@
     </article>
 
     <article class="paper">
-      <h3><a href="papers/FeedingFairly.pdf">Feeding Fairly</a></h3>
+      <h3><a href="papers/FeedingFairly.pdf">Feeding Fairly</a> <span class="pdf-tag">PDF</span></h3>
       <p class="meta">with <a href="https://sites.google.com/site/tmolinamillan">Teresa Molina-Millán</a>, <a href="https://www.ilri.org/people/emily-ouma">Emily Ouma</a>, and <a href="https://www.ilri.org/people/nils-teufel">Nils Teufel</a></p>
       <p class="tags">Uganda · Cluster RCT · 240 villages</p>
       <details><summary>Abstract</summary>
@@ -71,7 +71,7 @@
     </article>
 
     <article class="paper">
-      <h3><a href="papers/EnumEffects.pdf">Social Norms Under Observation</a></h3>
+      <h3><a href="papers/EnumEffects.pdf">Social Norms Under Observation</a> <span class="pdf-tag">PDF</span></h3>
       <p class="tags">Uganda · Randomized enumerator assignment · 2,400 respondents</p>
       <details><summary>Abstract</summary>
       <p>Does gender matching in household surveys improve the truthfulness of responses, or does it elicit answers that conform to the perceived expectations of a same-gender enumerator? I provide causal evidence using randomized enumerator assignment to 2,400 respondents in rural Uganda. Enumerator effects are minimal for objective measures but substantial for sensitive topics like knowledge, household activities, and social norms. Gender matching also produces asymmetric effects, relative to unmatched pairs. Male-male pairs report more conservative attitudes and higher dietary taboo prevalence, while female-female pairs express more progressive views and greater involvement in household decision-making. An embedded priming experiment shows that response shifts occur specifically when the enumerator is female, regardless of respondent gender, consistent with a female interviewer effect. These findings challenge conventional gender matching protocols in household surveys.</p>
@@ -114,7 +114,8 @@
   </main>
 </div>
 
-<footer>© 2026 Hardi Ahmed</footer>
+<footer>© 2026 Hardi Ahmed · Last updated <span id="updated">November 2026</span></footer>
+<script>(function(){var d=new Date(document.lastModified);if(!isNaN(d)&&d.getFullYear()>2025)document.getElementById("updated").textContent=d.toLocaleDateString("en-GB",{month:"long",year:"numeric"});})();</script>
 <script data-goatcounter="https://hardiahmedd.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
