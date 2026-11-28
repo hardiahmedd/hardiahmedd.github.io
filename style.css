@@ -82,19 +82,13 @@ main h1 + section > h2 { margin-top: 0; }
 .post h3 { margin: 0; font-size: 1.05rem; }
 .post p { margin: 2px 0 0; color: var(--muted); }
 
-.menu-btn { display: none; }
-
 footer { border-top: 1px solid var(--rule); text-align: center; color: var(--muted);
          font: .85rem "Source Sans 3", sans-serif; padding: 20px 16px 32px; }
 
 @media (max-width: 760px) {
   :root { --head: 55px; --h1: 54px; }
-  .masthead .inner { flex-wrap: wrap; align-items: center; gap: 0; padding: 10px 16px; }
-  .menu-btn { display: block; margin-left: auto; background: none; border: 0; padding: 4px 2px;
-              font-size: 1.5rem; line-height: 1; color: var(--text); cursor: pointer; }
-  .masthead nav { display: none; width: 100%; flex-direction: column; padding-top: 6px; }
-  .masthead .open nav { display: flex; }
-  .masthead nav a, .masthead nav a[aria-current] { margin-left: 0; padding: 10px 0; border-top: 1px solid var(--rule); border-bottom: 0; }
+  .masthead .inner { flex-wrap: nowrap; align-items: center; gap: 12px; padding: 10px 16px; }
+  .masthead nav a { margin-left: 16px; font-size: .95rem; }
   .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px 32px; }
   .profile { text-align: center; position: static; padding-top: 0; }
   main { padding-top: 0; }
