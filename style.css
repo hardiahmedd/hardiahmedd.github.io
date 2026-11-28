@@ -65,6 +65,17 @@ main h1 + section > h2 { margin-top: 0; }
 .pdf-tag { font: 600 .68rem "Source Sans 3", sans-serif; letter-spacing: .04em; color: var(--muted);
            border: 1px solid var(--rule); border-radius: 3px; padding: 1px 5px; margin-left: 6px; vertical-align: 2px; }
 
+/* cv page: PDF pages drawn by pdf.js */
+.cv-actions { margin: 0 0 18px; }
+.btn { display: inline-block; padding: 7px 14px; border: 1px solid var(--accent); border-radius: 4px; color: var(--accent);
+       font-family: "Source Sans 3", sans-serif; }
+.btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.cv-page { position: relative; margin-bottom: 18px; border: 1px solid var(--rule); box-shadow: 0 1px 6px rgba(0,0,0,.08); }
+.cv-page canvas { display: block; }
+.cv-link { position: absolute; display: block; border-radius: 2px; }
+.cv-link:hover { background: rgba(31,78,121,.12); }
+.cv-loading { color: var(--muted); font-family: "Source Sans 3", sans-serif; }
+
 /* blog */
 .post { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: center; margin-bottom: 28px; }
 .post img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; display: block; }
